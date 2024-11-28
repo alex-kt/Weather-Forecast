@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="searchContainer">
+      <div id="searchDiv">
+        <h1 id="title">Weather Forecast</h1>
+        <form class="searchForm">
+          <input class="searchBar" type="text" placeholder="Type the city" />
+          <button class="searchButton">Search</button>
+        </form>
+        <p class="warning"></p>
+      </div>
+    </div>
+    <div id="weatherContainer">
+      <h1 class="cityName">Example</h1>
+
+      <div id="weatherResult">
+        <div class="tempResult">
+          <div class="tempTitle">Temperature</div>
+          <div class="temperature">-</div>
+          <img
+            class="tempIcon"
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div class="weatherDescription">-</div>
+        </div>
+
+        <div id="windResult">
+          <div class="windTitle">Wind</div>
+          <div class="wind">-</div>
+          <img class="windIcon" src="images/windIcon.png" />
+        </div>
+      </div>
+      <div class="weatherDetailed">
+        <div class="feelsLike"></div>
+        <div class="tempMin"></div>
+        <div class="tempMax"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

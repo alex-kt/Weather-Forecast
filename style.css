@@ -1,0 +1,258 @@
+body {
+  background: url(images/morning.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden; /* Remove the scroll   */
+}
+
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin-top: 50px;
+}
+
+#weatherContainer {
+  width: 500px;
+  height: 420px;
+  margin: 0 auto;
+  border: solid 2px transparent;
+  background-color: rgba(0, 0, 0, 0.356);
+  border-radius: 20px;
+  display: none;
+}
+
+#title,
+.cityName {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+#title {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.745);
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+.searchBar {
+  padding: 10px 130px;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.356);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.searchButton {
+  padding: 10px;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.356);
+  color: rgba(255, 255, 255, 0.499);
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: rgba(0, 0, 0, 0.607);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.21);
+  text-align: center;
+}
+
+#weatherResult {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+}
+
+.tempResult {
+  margin-left: 70px;
+}
+
+#windResult {
+  margin-right: 70px;
+}
+
+.tempIcon {
+  display: flex;
+  justify-self: center;
+}
+
+.tempTitle,
+.temperature,
+.windTitle,
+.windResult,
+.wind,
+.windIcon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.temperature,
+.wind {
+  font-size: 32px;
+  color: white;
+}
+
+.warning {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+span {
+  color: white;
+  display: inline;
+}
+
+.windIcon {
+  transform: rotate(0deg);
+  margin-top: 40px;
+  display: flex;
+  justify-self: center;
+}
+
+.weatherDescription {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.weatherDetailed {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  #weatherContainer {
+    width: 90%; /* Adjust to fit smaller screens */
+    height: auto; /* Allow the height to adjust */
+  }
+  .searchBar {
+    padding: 10px 3px; /* Reduce padding for smaller screens */
+    display: flex;
+    justify-content: center;
+  }
+
+  .searchButton {
+    display: flex;
+    justify-self: center;
+    margin-top: 10px;
+  }
+
+  #weatherContainer {
+    height: 320px;
+  }
+
+  .temperature,
+  .wind {
+    font-size: 20px;
+  }
+
+  .cityName {
+    font-size: 20px;
+  }
+
+  .tempIcon {
+    width: 60px;
+  }
+
+  .windIcon {
+    width: 30px;
+  }
+
+  .weatherDescription {
+    font-size: 17px;
+  }
+
+  .weatherDetailed {
+    font-size: 13px;
+    margin-top: 30px;
+    gap: 40px;
+  }
+  #searchContainer {
+    height: 40vh;
+    margin-top: 0px;
+  }
+  .tempResult {
+    margin-left: 0px;
+  }
+
+  #windResult {
+    margin-right: 0px;
+  }
+
+  .searchForm {
+    display: flex;
+  }
+}
+
+@media (min-width: 2000px) {
+  #weatherContainer {
+    width: 1000px;
+    height: 700px;
+  }
+  .searchBar {
+    padding: 30px 600px; /* Reduce padding for smaller screens */
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+  .searchButton {
+    display: flex;
+    justify-self: center;
+    margin-top: 10px;
+    padding: 20px 50px;
+    font-size: 30px;
+  }
+
+  #title {
+    font-size: 100px;
+  }
+
+  .cityName {
+    font-size: 60px;
+  }
+  .temperature,
+  .wind {
+    font-size: 70px;
+  }
+  .tempTitle,
+  .windTitle {
+    font-size: 40px;
+  }
+  .tempIcon {
+    width: 200px;
+  }
+
+  .windIcon {
+    width: 90px;
+  }
+
+  .weatherDescription {
+    font-size: 30px;
+  }
+
+  .weatherDetailed {
+    font-size: 40px;
+    gap: 100px;
+  }
+  .searchForm {
+    display: flex;
+  }
+}
